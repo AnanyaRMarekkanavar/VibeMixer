@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VibeMixer</title>
+<style>
+body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #1DB954, #191414); color:white; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; margin:0; padding:20px; }
+h1 { font-size:2.5em; margin-bottom:10px; text-align:center;}
+form { background: rgba(255,255,255,0.1); padding:30px; border-radius:20px; max-width:400px; width:100%; }
+select, input { width:100%; padding:10px; margin:10px 0; border-radius:8px; border:none; font-size:1em;}
+button { width:100%; padding:12px; background:#1DB954; color:white; border:none; border-radius:25px; font-size:1em; cursor:pointer;}
+button:hover { background:#17a24e;}
+</style>
+</head>
+<body>
+<h1>🎵 VibeMixer</h1>
+<form action="/login" method="post">
+<label>Mood:</label>
+<select name="mood" required>
+<option value="">--Select Mood--</option>
+<option value="happy">Happy</option>
+<option value="sad">Sad</option>
+<option value="chill">Chill</option>
+<option value="energetic">Energetic</option>
+<option value="romantic">Romantic</option>
+</select>
+
+<label>Preferred Artist (optional):</label>
+<input type="text" name="artist" placeholder="Artist name">
+
+<label>Include Trending Songs?</label>
+<select name="trending">
+<option value="yes">Yes</option>
+<option value="no">No</option>
+</select>
+
+<label>Playlist Length:</label>
+<select name="length">
+<option value="5">5</option>
+<option value="10">10</option>
+<option value="15">15</option>
+</select>
+
+<button type="submit">Generate Playlist</button>
+</form>
+</body>
+</html>
